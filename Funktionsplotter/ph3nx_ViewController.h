@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ph3nx_ViewController : UIViewController
+- (IBAction)go:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *eingabe;
+- (IBAction)tastatur:(id)sender;
 
 @end

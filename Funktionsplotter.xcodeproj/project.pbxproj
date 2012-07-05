@@ -15,6 +15,7 @@
 		6C59CCE215A5D4AE00F99EC6 /* ph3nx_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C59CCE115A5D4AE00F99EC6 /* ph3nx_AppDelegate.m */; };
 		6C59CCE515A5D4AE00F99EC6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C59CCE315A5D4AE00F99EC6 /* MainStoryboard.storyboard */; };
 		6C59CCE815A5D4AE00F99EC6 /* ph3nx_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C59CCE715A5D4AE00F99EC6 /* ph3nx_ViewController.m */; };
+		6C59CCFC15A5D8A600F99EC6 /* ph3nx_Fenster.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C59CCFB15A5D8A600F99EC6 /* ph3nx_Fenster.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		6C59CCD115A5D4AE00F99EC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6C59CCD315A5D4AE00F99EC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C59CCD515A5D4AE00F99EC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6C59CCD915A5D4AE00F99EC6 /* Funktionsplotter-Info.plist */ = {isa = PBXFileReference; path = "Funktionsplotter-Info.plist"; sourceTree = "<group>"; };
+		6C59CCD915A5D4AE00F99EC6 /* Funktionsplotter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Funktionsplotter-Info.plist"; sourceTree = "<group>"; };
 		6C59CCDB15A5D4AE00F99EC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C59CCDD15A5D4AE00F99EC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C59CCDF15A5D4AE00F99EC6 /* Funktionsplotter-Prefix.pch */ = {isa = PBXFileReference; path = "Funktionsplotter-Prefix.pch"; sourceTree = "<group>"; };
-		6C59CCE015A5D4AE00F99EC6 /* ph3nx_AppDelegate.h */ = {isa = PBXFileReference; path = ph3nx_AppDelegate.h; sourceTree = "<group>"; };
+		6C59CCDF15A5D4AE00F99EC6 /* Funktionsplotter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Funktionsplotter-Prefix.pch"; sourceTree = "<group>"; };
+		6C59CCE015A5D4AE00F99EC6 /* ph3nx_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ph3nx_AppDelegate.h; sourceTree = "<group>"; };
 		6C59CCE115A5D4AE00F99EC6 /* ph3nx_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ph3nx_AppDelegate.m; sourceTree = "<group>"; };
 		6C59CCE415A5D4AE00F99EC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6C59CCE615A5D4AE00F99EC6 /* ph3nx_ViewController.h */ = {isa = PBXFileReference; path = ph3nx_ViewController.h; sourceTree = "<group>"; };
+		6C59CCE615A5D4AE00F99EC6 /* ph3nx_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ph3nx_ViewController.h; sourceTree = "<group>"; };
 		6C59CCE715A5D4AE00F99EC6 /* ph3nx_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ph3nx_ViewController.m; sourceTree = "<group>"; };
+		6C59CCFA15A5D8A600F99EC6 /* ph3nx_Fenster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ph3nx_Fenster.h; sourceTree = "<group>"; };
+		6C59CCFB15A5D8A600F99EC6 /* ph3nx_Fenster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ph3nx_Fenster.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				6C59CCE015A5D4AE00F99EC6 /* ph3nx_AppDelegate.h */,
 				6C59CCE115A5D4AE00F99EC6 /* ph3nx_AppDelegate.m */,
 				6C59CCE315A5D4AE00F99EC6 /* MainStoryboard.storyboard */,
+				6C59CCFA15A5D8A600F99EC6 /* ph3nx_Fenster.h */,
+				6C59CCFB15A5D8A600F99EC6 /* ph3nx_Fenster.m */,
 				6C59CCE615A5D4AE00F99EC6 /* ph3nx_ViewController.h */,
 				6C59CCE715A5D4AE00F99EC6 /* ph3nx_ViewController.m */,
 				6C59CCD815A5D4AE00F99EC6 /* Supporting Files */,
@@ -165,6 +170,7 @@
 				6C59CCDE15A5D4AE00F99EC6 /* main.m in Sources */,
 				6C59CCE215A5D4AE00F99EC6 /* ph3nx_AppDelegate.m in Sources */,
 				6C59CCE815A5D4AE00F99EC6 /* ph3nx_ViewController.m in Sources */,
+				6C59CCFC15A5D8A600F99EC6 /* ph3nx_Fenster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +282,7 @@
 				6C59CCED15A5D4AE00F99EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
