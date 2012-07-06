@@ -10,4 +10,6 @@
 
 @interface ph3nx_Fenster : UIView
 
+- (CGRect)zeichneFunktion:(NSInteger)hochzahl;
+
 @end

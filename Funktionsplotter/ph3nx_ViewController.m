@@ -7,12 +7,14 @@
 //
 
 #import "ph3nx_ViewController.h"
+#import "ph3nx_Fenster.h"
 
 @interface ph3nx_ViewController ()
 
 @end
 
 @implementation ph3nx_ViewController
+@synthesize hochzahlEingabe;
 @synthesize eingabe;
 
 - (void)viewDidLoad
@@ -24,6 +26,7 @@
 - (void)viewDidUnload
 {
     [self setEingabe:nil];
+    [self setHochzahlEingabe:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -37,24 +40,40 @@
     if([eingabe.text length] > 0) {
         
         NSString *funktion = eingabe.text;
-        int i = 0;
         NSString *vorFaktor = nil;
         
-        while(([funktion characterAtIndex:i] >= '0' && [funktion characterAtIndex:i] <= '9') || ([funktion characterAtIndex:i]) == '.') {
-            
+        // && i <= ([eingabe.text length]
+        // || [funktion characterAtIndex:i] == '.'
+        
+        //NSLog(@"laenge: %i", [eingabe.text length]);
+        // && (i < [eingabe.text length]))
+        
+        //while(isnumber([funktion characterAtIndex:i])) {
+        // (isnumber([funktion characterAtIndex:i]) || [funktion characterAtIndex:i] == '.' || [funktion characterAtIndex:i] == ',')
+        //unichar 
+        NSLog(@"Laenge string: %i", [eingabe.text length]);
+        for(int i = 0; i == [eingabe.text length]; ++i) {  
+            NSLog(@"for1");
             if (vorFaktor == nil) {
-                vorFaktor = [NSString stringWithFormat:@"%C", [funktion characterAtIndex:i]];
+                vorFaktor = [NSString stringWithFormat:@"%c", [funktion characterAtIndex:i]];
+                NSLog(@"if");
             }
             else {
-                vorFaktor = [NSString stringWithFormat:@"%@%C", vorFaktor, [funktion characterAtIndex:i]];
+                vorFaktor = [NSString stringWithFormat:@"%@%c", vorFaktor, [funktion characterAtIndex:i]];
+                NSLog(@"else");
             }
-            ++i;
+            NSLog(@"for");
         }
         
-        if (vorFaktor == nil) {
+        /*if (vorFaktor == nil) {
             vorFaktor = @"1";
         }
-        NSLog(@"Vorfaktor enthält: %@", vorFaktor);
+        else {
+            float vFaktor = [vorFaktor floatValue];
+        }*/
+        float vFaktor = [vorFaktor floatValue];
+        NSLog(@"Vorfaktor string: %@", vorFaktor);
+        NSLog(@"Vorfaktor float: %.2f", vFaktor);
     }
     
     else {
@@ -63,7 +82,12 @@
 }
 
 - (IBAction)tastatur:(id)sender {
-    [eingabe resignFirstResponder];
+    [self resignFirstResponder];
+}
+
+- (IBAction)ok:(id)sender {
+    int hoch = [hochzahlEingabe.text intValue];
+    NSLog(@"%@",nice(hoch));
 }
 
 @end

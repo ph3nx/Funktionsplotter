@@ -18,6 +18,43 @@
     return self;
 }
 
+- (NSString*)nice :(NSInteger)hochzahl {
+    int hoch = hochzahl;
+    if (hoch < 0) {
+        return @"ok";
+    }
+    else {
+        return @"madig";
+    }
+}
+
+- (CGRect)zeichneFunktion:(NSInteger)hochzahl {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGRect bounds = self.bounds;
+    
+    int xl = -20;
+    int xr = 20;
+    int yo = 20;
+    int yu = -20;
+    
+    float mx = CGRectGetMaxX(bounds)/(xr-xl);
+    float my = CGRectGetMaxY(bounds)/(yo-yu);
+    
+    float prevx = CGRectGetMinX(bounds);
+    float prevy = CGRectGetMidY(bounds);
+    
+    for(int i = 0; i < CGRectGetMaxX(bounds); ++i) {
+        float x = xl + i / mx;
+        float f = pow(x, hochzahl);
+        float yb = ((yo - f) * my);
+        CGContextMoveToPoint(ctx, prevx, prevy);
+        CGContextAddLineToPoint(ctx, i, yb);
+        CGContextStrokePath(ctx);    
+        prevx = i;
+        prevy = yb;
+    }
+}
+
 - (void)drawRect:(CGRect)rect {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     //CGContextSetLineWidth(ctx, 1.0);
@@ -37,8 +74,8 @@
     CGContextStrokePath(ctx);
     CGContextRestoreGState(ctx);
     
-    int xl = -5;
-    int xr = 5;
+    /*int xl = -20;
+    int xr = 20;
     int yo = 20;
     int yu = -20;
     
@@ -50,14 +87,14 @@
     
     for(int i = 0; i < CGRectGetMaxX(bounds); ++i) {
         float x = xl + i / mx;
-        float f = x * x * x;
+        float f = x ;
         float yb = ((yo - f) * my);
         CGContextMoveToPoint(ctx, prevx, prevy);
         CGContextAddLineToPoint(ctx, i, yb);
         CGContextStrokePath(ctx);    
         prevx = i;
         prevy = yb;
-    }    
+    }*/    
 }
 
 @end

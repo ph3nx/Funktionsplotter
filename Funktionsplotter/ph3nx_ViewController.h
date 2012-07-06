@@ -12,5 +12,7 @@
 - (IBAction)go:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *eingabe;
 - (IBAction)tastatur:(id)sender;
+- (IBAction)ok:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *hochzahlEingabe;
 
 @end
